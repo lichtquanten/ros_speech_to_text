@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>watson_speech_to_text</name>
+  <version>0.0.0</version>
+  <description>A wrapper around IBM Watson Speech to Text</description>
+
+  <maintainer email="sean@hackett.pw">Sean Hackett</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <exec_depend>audio_io_msgs</exec_depend>
+  <exec_depend>message_runtime</exec_depend>
+  <exec_depend>python-ibm_watson</exec_depend>
+  <exec_depend>python-numpy</exec_depend>
+  <exec_depend>python-soundfile</exec_depend>
+  <exec_depend>python-yaml</exec_depend>
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>speech_to_text_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+
+  <export>
+  </export>
+</package>

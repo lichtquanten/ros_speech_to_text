@@ -1,0 +1,25 @@
+<launch>
+	<node
+		pkg="audio_io"
+		type="capture.py"
+		name="mic"
+		output="screen"
+	/>
+	<node
+		pkg="ros_vad"
+		type="vad.py"
+		name="vad"
+		output="screen"
+	>
+		<param name="input_topic" value="/mic/data" />
+	</node>
+	<node
+		pkg="watson_speech_to_text"
+		type="synchronous.py"
+		name="s2t"
+		output="screen"
+	>
+		<param name="input_topic" value="/vad/complete" />
+		<param name="credentials_path" value="{INSERT PATH TO YOUR CREDENTIALS}" />
+	</node>
+</launch>
