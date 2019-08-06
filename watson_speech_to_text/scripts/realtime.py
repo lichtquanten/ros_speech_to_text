@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+from audio_io.utils import width_to_dtype
 from ibm_watson import SpeechToTextV1
 from ibm_watson.websocket import AudioSource, RecognizeCallback
 import io
@@ -12,17 +13,6 @@ import yaml
 
 from audio_io_msgs.msg import AudioData
 from speech_to_text_msgs.msg import Transcript
-
-def width_to_dtype(width):
-	if width == 1:
-		return np.int8
-	if width == 2:
-		return np.int16
-	if width == 4:
-		return np.int32
-	if width == 8:
-		return np.int64
-	return None
 
 class MyRecognizeCallback(RecognizeCallback):
     def __init__(self, final_topic, interim_topic):
