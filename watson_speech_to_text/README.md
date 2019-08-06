@@ -60,3 +60,7 @@ rosrun watson_speech realtime.py _input_topic:=/mic/data _credentials_path:=cred
 **~format** (string, default: 'PCM'): Format to convert audio to before uploading to Watson. Only 'PCM' and 'FLAC' are supported as of now. Data will not be changd if using PCM.
 
 If parsing your credentials fails, check that your fields are two spaces in from the left.
+
+## Nodes
+
+If you wish to use real-time speech to text, use my fork of IBM Watson Python SDK, available [here](https://github.com/sean-hackett/python-sdk).
