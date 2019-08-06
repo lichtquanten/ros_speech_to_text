@@ -61,6 +61,6 @@ rosrun watson_speech realtime.py _input_topic:=/mic/data _credentials_path:=cred
 
 If parsing your credentials fails, check that your fields are two spaces in from the left.
 
-## Nodes
+## Dependencies
 
-If you wish to use real-time speech to text, use my fork of IBM Watson Python SDK, available [here](https://github.com/sean-hackett/python-sdk).
+If you wish to use real-time speech to text, use my fork of the IBM Watson Python SDK, available [here](https://github.com/sean-hackett/python-sdk).
